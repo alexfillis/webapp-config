@@ -12,4 +12,10 @@
         <servlet-name>helloServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+
+    <env-entry>
+        <env-entry-name>webmasterEmail</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>admin@domain.com</env-entry-value>
+    </env-entry>
 </web-app>
