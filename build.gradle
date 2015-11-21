@@ -2,6 +2,7 @@ group 'play.java.web'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'war'
 
 sourceCompatibility = 1.5
 
@@ -10,5 +11,6 @@ repositories {
 }
 
 dependencies {
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
