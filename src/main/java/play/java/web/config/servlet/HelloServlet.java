@@ -14,15 +14,20 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            Context context = new InitialContext();
             // Get a handle to the JNDI environment naming context
+            Context context = new InitialContext();
             Context env = (Context)context.lookup("java:comp/env");
+
             // Get a single value
             String webmasterEmail = (String)env.lookup("webmasterEmail");
+            Integer maxExemptions = (Integer) env.lookup("maxExemptions");
+            String configFile = (String)env.lookup("config.file");
 
             PrintWriter out = resp.getWriter();
             try {
                 out.write(String.format("<h1>Hello %s</h1>", webmasterEmail));
+                out.write(String.format("<h1>maxExemptions %d</h1>", maxExemptions));
+                out.write(String.format("<h1>Configuring with %s</h1>", configFile));
             } finally {
                 out.close();
             }
