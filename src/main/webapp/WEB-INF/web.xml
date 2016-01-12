@@ -7,10 +7,18 @@
         <servlet-name>helloServlet</servlet-name>
         <servlet-class>play.java.web.config.servlet.HelloServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>configServlet</servlet-name>
+        <servlet-class>play.java.web.config.servlet.ConfigServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>helloServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>configServlet</servlet-name>
+        <url-pattern>/config</url-pattern>
     </servlet-mapping>
 
     <env-entry>
