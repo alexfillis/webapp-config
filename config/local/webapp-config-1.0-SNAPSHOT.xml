@@ -2,5 +2,5 @@
 <!-- Apache Tomcat context configuration -->
 <Context>
     <Environment name="maxExemptions" value="102" type="java.lang.Integer" override="false"/>
-    <Environment name="config.file" value="/etc/xyz.properties" type="java.lang.String" override="false"/>
+    <Environment name="config.file" value="<base-path>/data/test/config/test.properties,<base-path>/data/test/config/test2.properties" type="java.lang.String" override="false"/>
 </Context>
